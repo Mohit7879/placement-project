@@ -18,10 +18,10 @@ app.use(express.json())
 app.use(express.urlencoded({   
     extended: true,
 }))  
-
+ const uri="mongodb+srv://placement:7qMO7JNV1D5XYoun@cluster0.clh0vfu.mongodb.net/";
 
 // connecting mongoose
-mongoose.connect(`mongodb://127.0.0.1:27017/placementpool`, {useNewUrlParser : true, useUnifiedTopology : true})
+mongoose.connect(uri, {useNewUrlParser : true, useUnifiedTopology : true})
 .then(()=> {
     console.log("App is now connected to DB")
 }).catch((err)=> {
@@ -44,7 +44,7 @@ app.use(session({
 // using mongo-store
     cookie:{
 
-        maxAge:2*1000,
+        maxAge:60*60*1000,
         store:mongoStore.create({
             mongoUrl: "mongodb://127.0.0.1:27017/placementpool",
                 
