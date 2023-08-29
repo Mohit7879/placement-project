@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+   
+</head>
+<body>
+ 
+    <div style="display:flex ; ">
+
+
+  <div style="width:60%; padding:5px">
+          <h1 style="margin-left: 40%;">Interview List</h1>
+  <ol>
+    <% for(interview of interviews){ %>
+        <div style="border:2px solid red ; margin :10px; padding :5px">
+        <p>Company :<%= interview.company %></p>
+        <p> Date : <%= interview.date %></p>
+
+        <a href="/interview/<%= interview.id %>">show students allocated </a>
+ 
+
+        <form method="post" action="/addstudent">
+            <h3>allocate student for interview </h3>
+            <input type="hidden" name="company" value="<%= interview.id %>"/>
+            <input type="text" name="studentid" placeholder="student id"/>
+            <div > <button type="submit">allocate student</button> </div>
+        </form>
+    </div>
+       
+        <%}%>
+
+  </ol>
+
+  
+    
+
+    </div>
+
+
+
+
+
+    <div style=" border:1px solid black ; width :20%; position :fixed; margin-top: 20px; right: 150px; padding :3px">
+        <form method="post" action="/student/createinterview">
+      <h1>Interview</h1>
+     <input type="text" name="company" placeholder="company"/>
+      <input type="date" name="date" />
+      <br/>
+      <button type="submit">Create Interview </button>
+      </form>
+
+    </div>
+
+    </div>
+    
+</body>
+</html>

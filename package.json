@@ -1,0 +1,35 @@
+{
+  "name": "placement-pool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod-start": " nodemon index.js",
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.0.0",
+    "csv-writer": "^1.6.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "mongoose": "^7.4.3",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

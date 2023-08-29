@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="config/style.css"></link>
+</head>
+<body>
+
+    <form method="post" action="/jobs">
+
+          <input type="text" name="search" placeholder="search" required="true"/>
+           <button>submit</button>
+    </form>
+
+    <% if(jobs!=1){ %>
+   
+
+    <ul>
+        <% jobs.data.forEach(function(job) { %>
+          <li>
+            <h2><%= job.job_title %></h2> 
+             <p>Employer: <%= job.employer_name %></p>
+            <p>Employment Type: <%= job.job_employment_type %></p>
+            <p>Job link: <a href="<%= job.job_apply_link %>"> apply for job </a></p> 
+              
+          </li>
+        <% }); %>
+
+        <%}%>
+      </ul>
+
+      <form action="">
+        
+       
+      </form>
+</body>
+</html>
+ 

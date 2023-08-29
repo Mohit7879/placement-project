@@ -1,0 +1,24 @@
+<div style="border: 5px solid black ">
+<ul>
+<li> Student Id : <%= student.studentid %></li>
+<li> Name : <%= student.name %></li>
+<li>Batch : <%= student.batch %> </li>
+<li>College : <%= student.college %></li>
+<li>Dsa : <%= student.score.dsa %></li>
+<li>WebD : <%= student.score.web %></li>
+<li>React : <%= student.score.react %></li>
+<li> Final : <%= student.score.final %></li>
+<h1>Interview assigned</h1>
+   <% if(student.interviews[0]){ %>
+    <% for(Interview of student.interviews){ %>
+       <li> company : <%= Interview.company %></li>
+         <li>Date : <%= Interview.date %></li>
+         <br/>
+         <%}%>
+
+<%}%>
+
+
+</ul>
+
+</div>

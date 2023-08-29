@@ -1,0 +1,15 @@
+<nav><a  href="/interviewpage">Interview</a>    <a href="/csv">download</a>  <a href="/jobpage">job search</a></nav>
+
+
+         
+    <h1> Student List </h1>
+    <ol>
+    <% for(student of studetail){ %>
+       <li> <a href=" /profile/<%= student.id %>"> <%= student.name  %></a></li>
+       
+    <%}%>
+
+    </ol>
+
+    <a href="/createstudent"> create student</a>
+  

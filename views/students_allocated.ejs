@@ -1,0 +1,22 @@
+<ol>
+<% if(students_a.students[0]){ %>
+ 
+    <% for(student of students_a.students){%>
+       <li>Name: <%= student.name %>  </li>
+           <p>  status:<%= student.status %></p>
+           <p>batch <%= student.batch %></p>
+           <p>student Id  <%= student.studentid %></p>
+           <p> College <%= student.college %></p>
+           <p> Results <%= student.results%></p>
+            
+         <%}%>
+       
+        <%} else {%>  
+
+             <h1>No students </h1>
+
+            <%}%>
+
+    
+
+</ol>
