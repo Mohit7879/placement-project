@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({   
     extended: true,
 }))  
- const uri="mongodb+srv://placement:7qMO7JNV1D5XYoun@cluster0.clh0vfu.mongodb.net/";
+ const uri="mongodb+srv://placement:gYHA71RGkTsEi7ng@cluster0.clh0vfu.mongodb.net/?retryWrites=true&w=majority";
 
 // connecting mongoose
 mongoose.connect(uri, {useNewUrlParser : true, useUnifiedTopology : true})
